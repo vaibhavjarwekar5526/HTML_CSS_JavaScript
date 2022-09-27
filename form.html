@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Inputs</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form>
+        <table>
+            <tr>
+                <td><label for="firstName">First Name:</label></td>
+                <td><input type="text" placeholder="Enter first name here"/></td>
+            </tr>
+            <tr>
+                <td><label for="lastName">Last Name:</label></td>
+                <td><input type="text" placeholder="Enter last name here"/></td>
+            </tr>
+            <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" placeholder="Enter email here"/></td>
+            </tr>
+            <tr>
+                    <td><label for="dob">DOB:</label></td>
+                    <td><input type="date"/></td>
+            </tr>
+            <tr>
+                    <td><label for="mobilenum">Mobile no.:</label></td>
+                    <td><input type="tel"/></td>
+            </tr>
+            <tr>
+                    <td><label for="courses">Courses:</label></td>
+                    <td>
+                        <input type="checkbox" name="courses" value="10th"/>10th
+                        <input type="checkbox" name="courses" value="12th"/>12th<br/>
+                        <input type="checkbox" name="courses" value="B-tech"/>B-tech
+                        <input type="checkbox" name="courses" value="B-tech"/>M-tech
+                    </td>
+            </tr>
+            <tr>
+                    <td><label for="gender">Gender:</label></td>
+                    <td>
+                        <input type="radio" name="gender" value="Male"/>Male
+                        <input type="radio" name="gender" value="Female"/>Female
+                        <input type="radio" name="gender" value="Transgender"/>Transgender
+                        
+                    </td>
+            </tr>
+            <tr>
+                    <td><label for="sports">Sports You Like:</label></td>
+                    <td>
+                        <select>
+                            <option>Cricket</option>
+                            <option>Batminton</option>
+                        </select>
+                    </td>
+            </tr>
+            <tr>
+                <td><label>Message:</label></td>
+                <td><textarea cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit"/></td>
+                <td><input type="reset" value="Reset"/></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
