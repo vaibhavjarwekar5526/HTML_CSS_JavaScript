@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friendsbook Sign Up</title>
+</head>
+<style>
+    body{
+        background-color: #ededf5;
+    }
+    h1{
+        color:blue;
+        font-size: 55px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    label > span{
+        border-radius: 45%;
+        background-color: grey;
+        padding: 0.2px 1.5px;
+    }
+    img{
+        width: 13.5px;
+        padding-top: 7px;
+    }
+    .gender > div > span {
+        border: 1px solid grey;
+        margin: 5px;
+        padding: 5px;
+        border-radius: 4px;
+    }
+
+    #inputbox > div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+    }
+    #dash{
+        background-color: grey;
+        height: 0.5px;
+    }
+    section{
+        width: 440px;
+        border: 1px solid grey;
+        margin: auto;
+        border-radius: 10px;
+        background-color: white;
+    }
+    form{
+        padding: 15px;
+    }
+    #inputbox input{
+        border-radius: 5px;
+        border: 1px solid grey;
+        padding: 10px;
+    }
+    #inputbox > div:nth-child(1) > input{
+        width: 180px;
+    }
+    #inputbox > div:nth-child(1){
+        margin-bottom: 10px;
+    }
+    #inputbox > div:nth-child(2) >input:nth-child(2){
+        margin: 10px 0px;
+    }
+    section h3{
+        text-align: center;
+        margin-top: 4px;
+        margin-bottom: 30px;
+        color: blue;
+    }
+    input[type="submit"]{
+        width: 190px;
+        background-color: green;
+        border: 1px solid green;
+        padding: 5px;
+        border-radius: 7px;
+        margin-left: 110px;
+        color: white;
+        font-size: 20px;
+        margin-top: 8px;
+    }
+    #dropdown > div > select{
+        width: 134px;
+        padding:10px 5px;
+    }
+    span > label{
+        margin-right: 43.5px;
+    }
+    #dropdown > div{
+        margin-top: 7px;
+    }
+    .gender > div{
+        margin-top: 13px;
+    }
+    section p:nth-child(1){
+        font-size: 25px;
+        font-weight: bolder;
+        margin: 5px 0px;
+        text-align: center;
+    }
+    section p:nth-child(2){
+        margin-top: 0px;
+        color: grey;
+        font-size: 17px;
+        text-align: center;
+    }
+    .gender + p, .gender +p+p{
+        font-size: 12.5px;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    p > a{
+        color: purple;
+        cursor: pointer;
+    }
+ </style>
+<body>
+    <h1>friendsbook</h1>
+    <section>
+        <p>Create a new account</p>
+        <p>It's quick and easy.</p>
+        <div id="dash"></div>
+        <form>
+            <div id="inputbox">
+                <div>
+                    <input type="text" placeholder="First name"/>
+                    <input type="text" placeholder="Last name"/>
+                </div>
+                <div>
+                    <input type="text" placeholder="Mobile number or email address"/>
+                    <input type="text" placeholder="New password"/>
+                </div>
+            </div>
+            <div id="dropdown">
+                <label>Date of birth <img src="questionmark.JPG" alt="question mark"/></label>
+                <div>
+                    <select name="dd">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <select name="mm">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                    </select>
+                    <select name="yyyy">
+                        <option value="2000">2000</option>
+                        <option value="2001">2001</option>
+                        <option value="2002">2002</option>
+                    </select>
+                </div>
+            </div>
+            <div class="gender">
+                <label>Gender <img src="questionmark.JPG" alt="question mark"/></label>
+                <div>
+                    <span>
+                        <label for="gender">Female  </label>
+                        <input type="radio" name="gender" value="Female"/>
+                    </span>
+                    <span>
+                        <label for="gender">Male  </label>
+                        <input type="radio" name="gender" value="Male"/>
+                    </span>
+                    <span>
+                        <label for="gender">Custom  </label>
+                        <input type="radio" name="gender" value="Custom"/>
+                    </span>
+                </div>
+            </div>
+            <p>People who use our service may have uploaded your contact information to Facebook. <a>Learn more.</a></p>
+            <p>By clicking Sign Up, you agree to our <a>Terms</a>, <a>Privacy Policy</a> and <a>Cookies Policy</a>. You may receive SMS notifications from us and can opt out at any time.</p>
+            <input type="submit" value="Sign Up"/>
+        </form>
+        <a href="FriendsBookLogin.html"><h3>Already have an account?</h3></a>
+    </section>
+</body>
+</html>
