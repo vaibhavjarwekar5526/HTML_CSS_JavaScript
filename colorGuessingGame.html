@@ -11,17 +11,17 @@
         let count = 6;
         
         window.onload = function() {
-            color = colorGenerate();
+            color = generateRGBColor();
             document.querySelector("h2").innerHTML="RGB(" + color + ")";
         }
 
-        function colorGenerate()
+        function generateRGBColor()
         {
             let ind = Math.floor(Math.random() * colorCode.length);
             return colorCode[ind];
         }
 
-        function checkValue(valueStr)
+        function checkRGBValue(valueStr)
         {
             if(color != null)
             {
@@ -106,18 +106,18 @@
     </div>
     <p>Guess the color</p>
     <div id="colorBox" >
-        <div class="float" style="background-color:rgb(225, 27, 27)" onclick="checkValue('225, 27, 27')"></div>
-        <div class="float" style="background-color:rgb(41, 241, 19)" onclick="checkValue('41, 241, 19')"></div>
-        <div class="float" style="background-color:rgb(145, 163, 33)" onclick="checkValue('145, 163, 33')"></div>
-        <div class="float" style="background-color:rgb(59, 19, 203)" onclick="checkValue('59, 19, 203')"></div>
-        <div class="float clear" style="background-color:rgb(245, 244, 244)" onclick="checkValue('245, 244, 244')"></div>
-        <div class="float" style="background-color:rgb(248, 244, 14)" onclick="checkValue('248, 244, 14')"></div>
-        <div class="float" style="background-color:rgb(240, 21, 225)" onclick="checkValue('240, 21, 225')"></div>
-        <div class="float" style="background-color:rgb(38, 184, 221)" onclick="checkValue('38, 184, 221')"></div>
-        <div class="float clear" style="background-color:rgb(52, 218, 179)" onclick="checkValue('52, 218, 179')"></div>
-        <div class="float" style="background-color:rgb(13, 67, 35)" onclick="checkValue('13, 67, 35')"></div>
-        <div class="float" style="background-color:rgb(221, 237, 168)" onclick="checkValue('221, 237, 168')"></div>
-        <div class="float" style="background-color:rgb(125, 90, 239)" onclick="checkValue('125, 90, 239')"></div>
+        <div class="float" style="background-color:rgb(225, 27, 27)" onclick="checkRGBValue('225, 27, 27')"></div>
+        <div class="float" style="background-color:rgb(41, 241, 19)" onclick="checkRGBValue('41, 241, 19')"></div>
+        <div class="float" style="background-color:rgb(145, 163, 33)" onclick="checkRGBValue('145, 163, 33')"></div>
+        <div class="float" style="background-color:rgb(59, 19, 203)" onclick="checkRGBValue('59, 19, 203')"></div>
+        <div class="float clear" style="background-color:rgb(245, 244, 244)" onclick="checkRGBValue('245, 244, 244')"></div>
+        <div class="float" style="background-color:rgb(248, 244, 14)" onclick="checkRGBValue('248, 244, 14')"></div>
+        <div class="float" style="background-color:rgb(240, 21, 225)" onclick="checkRGBValue('240, 21, 225')"></div>
+        <div class="float" style="background-color:rgb(38, 184, 221)" onclick="checkRGBValue('38, 184, 221')"></div>
+        <div class="float clear" style="background-color:rgb(52, 218, 179)" onclick="checkRGBValue('52, 218, 179')"></div>
+        <div class="float" style="background-color:rgb(13, 67, 35)" onclick="checkRGBValue('13, 67, 35')"></div>
+        <div class="float" style="background-color:rgb(221, 237, 168)" onclick="checkRGBValue('221, 237, 168')"></div>
+        <div class="float" style="background-color:rgb(125, 90, 239)" onclick="checkRGBValue('125, 90, 239')"></div>
     </div>
     <div clear="both"></div>
 </body>
