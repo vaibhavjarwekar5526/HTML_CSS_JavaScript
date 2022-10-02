@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Table By Given Row And Column</title>
+</head>
+<style>
+    table,td{
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <div>
+        <input type="text" placeholder="Enter rows">
+        <input type="text" placeholder="Enter columns">
+        <button type="button">Submit</button>
+    </div>
+    <br/>
+    <table></table>
+</body>
+<script>
+    document.querySelector("button").addEventListener("click", ()=>{
+        let rows = parseInt(document.querySelectorAll("input")[0].value);
+        let columns = parseInt(document.querySelectorAll("input")[1].value);
+
+        let table = document.querySelector("table");
+        for(let i=0; i<rows; i++){
+            let tr = document.createElement("tr");
+            for(let j=0; j<columns; j++){
+                let td = document.createElement("td");
+                td.innerHTML= i + " " + j;
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+    });
+</script>
+</html>
