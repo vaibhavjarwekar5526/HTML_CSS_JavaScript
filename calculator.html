@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<body>
+    <div>
+        First Value: <input type="text" placeholder="Enter first number">
+        Arithmetic Operator: <input type="text" placeholder="Enter (+, -, *, /, %)">
+        Second Value: <input type="text" placeholder="Enter second number">
+        <button type="button">=</button>
+    </div>
+    <br/>
+    <br/>
+    <div>Answer is <span></span></div>
+</body>
+<script>
+    document.querySelector("button").addEventListener("click", ()=>{
+        let fValue = parseInt(document.querySelectorAll("input")[0].value);
+        let operator = document.querySelectorAll("input")[1].value;
+        let sValue = parseInt(document.querySelectorAll("input")[2].value);
+
+        let span = document.querySelector("span");
+        span.style.border="1px solid black";
+        span.style.padding="10px";
+        switch(operator){
+            case "+":
+                span.innerHTML= fValue + sValue;
+                break;
+            case "-":
+                span.innerHTML= fValue - sValue;
+                break;
+            case "*":
+                span.innerHTML= fValue * sValue;
+                break;
+            case "/":
+                span.innerHTML=fValue / sValue;
+                break;
+            case "%":
+                span.innerHTML= fValue % sValue;
+                break;
+            default:
+                span.innerHTML= "Please enter proper operator";
+                break;
+        }
+        
+    });
+</script>
+</html>
