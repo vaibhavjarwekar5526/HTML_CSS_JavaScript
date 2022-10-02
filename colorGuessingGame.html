@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the color</title>
+    <script>
+        let colorCode = ["225, 27, 27","41, 241, 19","145, 163, 33","59, 19, 203","245, 244, 244","248, 244, 14","240, 21, 225","38, 184, 221","52, 218, 179","13, 67, 35","221, 237, 168","125, 90, 239"];
+        let color=null; 
+        let count = 6;
+        
+        window.onload = function() {
+            color = colorGenerate();
+            document.querySelector("h2").innerHTML="RGB(" + color + ")";
+        }
+
+        function colorGenerate()
+        {
+            let ind = Math.floor(Math.random() * colorCode.length);
+            return colorCode[ind];
+        }
+
+        function checkValue(valueStr)
+        {
+            if(color != null)
+            {
+                if(valueStr == color)
+                {
+                    document.querySelector("p").innerHTML = "Hurrah! your guessing is correct.. play again";
+                    setTimeout(()=>{window.location.reload();},3000);
+                }
+                else
+                {
+                    count--;
+                    if(count == 0)
+                    {
+                        document.querySelector("p").innerHTML = "You loose!! starting again in few seconds";
+                        setTimeout(()=>{window.location.reload();},2000);
+
+                    }
+                    else if(count > 0){
+                        document.querySelector("p").innerHTML = "Wrong, only " + count + " chance left";
+                    }
+                }
+            }
+        }
+
+        function pageRefresh()
+        {
+            window.location.reload();
+        }
+
+
+    </script>
+    <style>
+        body{
+            background-color:cornsilk;
+            text-align: center;
+        }
+        h1{
+            margin: 0px;
+            margin-bottom: 5px;
+        }
+        button{
+            background: deepskyblue;
+            border: 1px solid black;
+            padding: 3px;
+            border-radius: 5px;
+        }
+        p{
+            font-size: 20px;
+        }
+        #colorBox{
+            width: 560px;
+            height: 420px;
+            margin: auto;
+            padding: 5px;
+            border: 5px solid black;
+            background-color: burlywood;
+            border-radius: 20px;
+        }
+        #colorBox > div{
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            border-radius: 10px;
+            background-color: teal;
+            cursor: pointer;
+        }
+        .float{
+            float: left;
+        }
+        .clear{
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+    <h1>RGB Color Guessing Game</h1>
+    <div>
+        <button onclick="pageRefresh()"> Page Refresh</button>
+    </div>
+    <div>
+        <h2></h2>
+    </div>
+    <p>Guess the color</p>
+    <div id="colorBox" >
+        <div class="float" style="background-color:rgb(225, 27, 27)" onclick="checkValue('225, 27, 27')"></div>
+        <div class="float" style="background-color:rgb(41, 241, 19)" onclick="checkValue('41, 241, 19')"></div>
+        <div class="float" style="background-color:rgb(145, 163, 33)" onclick="checkValue('145, 163, 33')"></div>
+        <div class="float" style="background-color:rgb(59, 19, 203)" onclick="checkValue('59, 19, 203')"></div>
+        <div class="float clear" style="background-color:rgb(245, 244, 244)" onclick="checkValue('245, 244, 244')"></div>
+        <div class="float" style="background-color:rgb(248, 244, 14)" onclick="checkValue('248, 244, 14')"></div>
+        <div class="float" style="background-color:rgb(240, 21, 225)" onclick="checkValue('240, 21, 225')"></div>
+        <div class="float" style="background-color:rgb(38, 184, 221)" onclick="checkValue('38, 184, 221')"></div>
+        <div class="float clear" style="background-color:rgb(52, 218, 179)" onclick="checkValue('52, 218, 179')"></div>
+        <div class="float" style="background-color:rgb(13, 67, 35)" onclick="checkValue('13, 67, 35')"></div>
+        <div class="float" style="background-color:rgb(221, 237, 168)" onclick="checkValue('221, 237, 168')"></div>
+        <div class="float" style="background-color:rgb(125, 90, 239)" onclick="checkValue('125, 90, 239')"></div>
+    </div>
+    <div clear="both"></div>
+</body>
+</html>
+
+
