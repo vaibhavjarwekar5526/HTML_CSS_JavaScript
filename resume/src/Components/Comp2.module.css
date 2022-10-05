@@ -1,0 +1,41 @@
+h3{
+    font-size: 23px;
+    text-decoration: underline;
+    color: white;
+    margin-top: 30px;
+}
+.bigImg > img{
+    width: 250px;
+    height: 250px;
+    border-radius: 130px;
+    border: 13px solid rgb(55, 75, 119);
+}
+.image > div > span > img{
+    width: 30px;
+    margin-right: 10px;
+}
+.image > div {
+    margin: 20px 0px;
+}
+.comp2{
+    background-color: rgb(37, 48, 72);
+    padding: 30px;
+    width: 300px;
+}
+
+li{
+    font-size: 18px;
+    color: whitesmoke;
+    margin: 20px;
+}
+
+label{
+    font-size: 18px;
+    color: whitesmoke;
+}
+
+/*.dash{
+    width: 260px;
+    background-color: red;
+    height: 10px;
+}*/
