@@ -1,0 +1,40 @@
+.scored > p{
+    font-size: 25px;
+}
+
+.scored > div > button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: cornflowerblue;
+}
+
+.currentQuestionNum{
+    font-size: 30px;
+}
+
+.question {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    margin: 20px;
+}
+
+.optionsButton {
+    border: 5px solid purple;
+    width: 400px;
+    margin: auto;
+}
+
+.optionsButton > p {
+    margin-bottom: 2px;
+    font-size: 18px;
+}
+
+.optionsButton > button{
+    padding: 10px 30px;
+    margin: 20px;
+    cursor: pointer;
+    background-color: darkorchid;
+    border-radius: 20px;
+    font-size: 20px;
+}
+

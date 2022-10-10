@@ -1,0 +1,16 @@
+.App{
+  border: 20px solid blue;
+  width: 800px;
+  margin: auto;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+}
+
+h1{
+  margin-top: 0px;
+  margin-bottom: 20px;
+  color: red;
+  font-size: 50px;
+}
