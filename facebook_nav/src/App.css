@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+}
+
+img{
+  width: 50px;
+  border-radius: 20px;
+}
+
+.div2{
+  margin-top: 12px;
+}
+
+.div2 > span {
+    border: 1px solid black;
+    padding: 2px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.dpImg  img{
+  width: 40px;
+  margin-top: 5px;
+  margin-left: 80px;
+}
+.dpName{
+  font-size: 18px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.plus{
+  margin-top: 10px;
+}
+
+footer{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background-color: purple;
+  height: 40px;
+  margin-top: 498px;
+  font-size: 20px;
+  color: whitesmoke;
+  padding-top: 15px; 
+}
