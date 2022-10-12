@@ -1,10 +1,12 @@
-const counterReducer=(state=0,action)=>
+
+let input = window.prompt("Enter any number")
+const counterReducer=(state=input,action)=>
 {
     switch(action.type){
         case "INCREMENT":
-            return state+1;
+            return parseInt(state)+action.value;
         case "DECREMENT":
-            return state-1;
+            return parseInt(state)-action.value;
         default:
             return state;
     }

@@ -1,8 +1,8 @@
-const signInReducer=(state=false,action)=>
+const signInReducer=(state="please sign in",action)=>
 {
     switch(action.type){
         case 'SIGNIN':
-            return !state;
+            return state="Signed In";
         default:
             return state;
     }
