@@ -45,3 +45,31 @@ footer{
   color: whitesmoke;
   padding-top: 15px; 
 }
+
+.logout{
+  margin-left: 10px;
+
+}
+
+.logout > button {
+  background-color: rgb(189, 188, 189);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.Effect{
+    text-align: center;
+    margin-top: 200px;
+}
+.Effect h1{
+  color: blue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+}
+.Effect button{
+  background-color: rgb(189, 188, 189);
+  padding: 15px 40px;
+  border-radius: 10px;
+  font-size: 20px; 
+}

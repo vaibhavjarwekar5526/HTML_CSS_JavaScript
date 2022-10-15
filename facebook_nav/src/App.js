@@ -12,6 +12,8 @@ import { SiFacebookgaming, SiHomeassistantcommunitystore } from 'react-icons/si'
 import styled from 'styled-components';
 import facebook from './facebook.png';
 import dp from './dp.png';
+import {useState} from 'react';
+
 
 
 
@@ -53,38 +55,54 @@ const Sp = styled.span`
 
 
 function App() {
+  const [view, setView] = useState(false);
+
+  const change = ()=> {
+    
+    setView(!view);
+  }
 
   return (
-    <div className="App">
-      <Nav>
-        <div>
-          <img src={facebook} alt="facebook"/>
+      view ? (
+        <div className="App">
+        <Nav>
+          <div>
+            <img src={facebook} alt="facebook"/>
+          </div>
+          <div className="div2">
+            <input type="text" placeholder="Search..."/><span><BsSearch/></span>
+          </div>
+          <Div3>
+            <WrapperLink to="/"><AiFillHome/></WrapperLink>
+            <WrapperLink to="/Watch"><AiFillYoutube/></WrapperLink>
+            <WrapperLink to="/MarketPlace"><SiHomeassistantcommunitystore/></WrapperLink>
+            <WrapperLink to="/Groups"><MdGroups/></WrapperLink>
+            <WrapperLink to="/Gaming"><SiFacebookgaming/></WrapperLink>
+          </Div3>
+          <div className="dpImg">
+            <span><img src={dp} alt="dp"/></span>
+          </div>
+          <div className="dpName">Vaibhav</div>
+          <div className="plus"><Sp><AiOutlinePlus/></Sp></div>
+          <div className="logout"><button onClick={change}>Logout</button></div>
+        </Nav>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/Watch" element={<Watch/>}/>
+          <Route path="/MarketPlace" element={<MarketPlace/>}/>
+          <Route path="/Groups" element={<Groups/>}/>
+          <Route path="/Gaming" element={<Gaming/>}/>
+        </Routes>
+        <footer><div>Copyright @ 2022 All Rights Reserved</div></footer>
+      </div>
+      
+      ):(
+        <div className="Effect">
+          <h1>Facebook Login</h1>
+          <div><button onClick={change}>Login</button></div>
         </div>
-        <div className="div2">
-          <input type="text" placeholder="Search..."/><span><BsSearch/></span>
-        </div>
-        <Div3>
-          <WrapperLink to="/"><AiFillHome/></WrapperLink>
-          <WrapperLink to="/Watch"><AiFillYoutube/></WrapperLink>
-          <WrapperLink to="/MarketPlace"><SiHomeassistantcommunitystore/></WrapperLink>
-          <WrapperLink to="/Groups"><MdGroups/></WrapperLink>
-          <WrapperLink to="/Gaming"><SiFacebookgaming/></WrapperLink>
-        </Div3>
-        <div className="dpImg">
-          <span><img src={dp} alt="dp"/></span>
-        </div>
-        <div className="dpName">Vaibhav</div>
-        <div className="plus"><Sp><AiOutlinePlus/></Sp></div>
-      </Nav>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/Watch" element={<Watch/>}/>
-        <Route path="/MarketPlace" element={<MarketPlace/>}/>
-        <Route path="/Groups" element={<Groups/>}/>
-        <Route path="/Gaming" element={<Gaming/>}/>
-      </Routes>
-      <footer><div>Copyright @ 2022 All Rights Reserved</div></footer>
-    </div>
+      )
+    
   );
 }
 
