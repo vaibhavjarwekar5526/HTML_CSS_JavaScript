@@ -1,0 +1,34 @@
+{
+    "products": [
+      { "id": 1, "prod_name": "NPX AntiVirus"},
+      { "id": 2, "prod_name": "Casino Game"},
+      { "id": 3, "prod_name": "Microsoft Office"},
+      { "id": 4, "prod_name": "Vs Code"},
+      { "id": 5, "prod_name": "IntelliJ"},
+      { "id": 6, "prod_name": "JDK"},
+      { "id": 7, "prod_name": "My Sql Work Bench"},
+      { "id": 8, "prod_name": "TodoList Web App"},
+      { "id": 9, "prod_name": "Zoom Meeting"}
+    ],
+    "revenue": [
+      { "year": 2011, "rev": "15 Lakh"},
+      { "year": 2012, "rev": "1 Crores"},
+      { "year": 2013, "rev": "15 Crores"},
+      { "year": 2014, "rev": "25 Crores"},
+      { "year": 2015, "rev": "50 Crores"}
+    ],
+    "clients": [
+      { "id": 1, "name": "TCS"},
+      { "id": 2, "name": "Wipro"},
+      { "id": 3, "name": "Cognizant"},
+      { "id": 4, "name": "HCL"},
+      { "id": 5, "name": "ShareChat"}
+    ],
+    "statistics": [
+      { "id": 1, "name": "Sales Prospecting Statistics"},
+      { "id": 2, "name": "Sales Follow-Up Statistics"},
+      { "id": 3, "name": "Sales Email Statistics"},
+      { "id": 4, "name": "Sales Call Statistics"},
+      { "id": 5, "name": "Social Selling Statistics"}
+    ]
+}
